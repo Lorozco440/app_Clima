@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* --- 1. Estilos para el Logo --- */
+
+/* Hacemos que el contenedor principal sea 'relative'
+   para que el 'absolute' del logo se base en él. */
+.App {
+  position: relative;
+  text-align: center;
+}
+
+.logo-umg {
+  position: absolute;  /* Posicionamiento absoluto */
+  top: 20px;           /* 20px desde arriba */
+  right: 20px;         /* 20px desde la derecha */
+  width: 120px;        /* Un tamaño fijo, ajústalo a tu gusto */
+  height: auto;        /* Mantiene la proporción de la imagen */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estos son tus estilos base (para escritorio) */
+.resultado-clima {
+  background-color: #3a3f4b; /* Un fondo para que se vea mejor */
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px; /* Ancho máximo en pantallas grandes */
+}
+
+.temperatura {
+  font-size: 4rem; /* Tamaño grande para escritorio */
+  font-weight: bold;
+}
+
+/* Cuando la pantalla sea de 600px o menos (móviles) */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 1.8rem; /* Hacemos el título más pequeño */
+  }
+
+  /* Hacemos el logo más pequeño y lo pegamos más a la esquina */
+  .logo-umg {
+    width: 80px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Hacemos que la tarjeta del clima ocupe casi toda la pantalla */
+  .resultado-clima {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Reducimos el tamaño de la temperatura en móviles */
+  .temperatura {
+    font-size: 3.2rem;
+  }
+}
+
